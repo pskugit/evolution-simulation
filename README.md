@@ -1,5 +1,5 @@
 # Evolution Simulation
-> a simulation of artificial evolution
+> a simulation of the evolution of brain equipped agents
 
 This program simulates agents that are equipped with several sensors and actions that conected through an
 artificial neural network which is unique for every single angent. The weights of the feed forward net are updates through an evolutionary algorithm with the age of the agent as an implicit fitness function.
