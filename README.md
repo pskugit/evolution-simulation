@@ -33,7 +33,7 @@ Aside from the main simulation arem the program has the informative sections:
 
 ![](/screenshots/ls4.jpg?raw=true "Optional Title")
 
-Agent are equipped with 13 sensors that form the input variable for the neural network:
+Agents are equipped with 13 sensors that form the input variable for the neural network:
 
 1. _health_: the current health percentage (also mirrored in the agents color intensity)
 2. _speed_: the current speed (relative to max_speed)
