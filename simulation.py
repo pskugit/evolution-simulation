@@ -1,5 +1,4 @@
 import pygame
-import pprint
 import operator
 from collections import defaultdict
 
