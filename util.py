@@ -1,7 +1,7 @@
-import random
-import string
-import math
 import sys
+import math
+import string
+import random
 import numpy as np
 
 def sigmoid(x):
@@ -9,17 +9,6 @@ def sigmoid(x):
 
 def tanh(x):
     return 2 * sigmoid(2*x) -1
-
-## NAME
-class name:
-    def __init__(self, archTypeName):
-        self.firstname = generate_word(2)
-        self.lastname = archTypeName
-
-    def toString(self):
-        return self.firstname+"_"+self.lastname
-
-
 
 def generate_word(length):
     VOWELS = "aeiou"
@@ -32,9 +21,13 @@ def generate_word(length):
             word += random.choice(VOWELS)
     return word
 
+class name:
+    def __init__(self, archTypeName):
+        self.firstname = generate_word(2)
+        self.lastname = archTypeName
+    def toString(self):
+        return self.firstname+"_"+self.lastname
 
-
-## POSITION
 class Position:
     def __init__(self, x, y):
         self.x = x
@@ -53,7 +46,6 @@ class Position:
 
     def eucDistanceTo(self, position):
         return math.sqrt(abs(self.x - position.x)**2 +abs(self.y - position.y)**2)
-
 
 def dictPrint(dictionary):
     strlist =[]
