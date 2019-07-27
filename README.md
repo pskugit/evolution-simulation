@@ -65,14 +65,14 @@ Aggressive agents bite on collision, while altruistic agents transfuse health to
 Several agent agnostic parameters may be changed within the agents '__init__()' and 'setPheno()' methods to further generate interesting evolution.
 ```python
 def __init__(...):
-  [...]
-  self.power = 3  
-  self.max_age = 7000           
-  self.asexual_reproduction_rate = 0.002
-  self.sexual_reproduction_rate = 0.006
-  self.metabolism = 1                       
-  self.reproduction_cost = 0
-  [...]
+    [...]
+    self.power = 3  
+    self.max_age = 7000           
+    self.asexual_reproduction_rate = 0.002
+    self.sexual_reproduction_rate = 0.006
+    self.metabolism = 1                       
+    self.reproduction_cost = 0
+    [...]
 
 def setPheno(self):
     self.max_health = 50*self.size
@@ -84,23 +84,24 @@ def setPheno(self):
 ```
 
 One might also change what exactly happens when two agents collide within the agents 'collide()' method, to observe how this in turn affects the agents behavioral evolution.
+
 ```python
 def collide(self):
-      self.collission = 1 if self.collisionList else 0
-      for otherAgent in self.collisionList:
-          ## plain damage
-          #self.health -= 25
+    self.collission = 1 if self.collisionList else 0
+    for otherAgent in self.collisionList:
+        ## plain damage
+        #self.health -= 25
 
-          ## instant death
-          #self.health = -100
+        ## instant death
+        #self.health = -100
 
-          ## only the faster one bites
-          #if self.velocity > otherAgent.velocity:
-          #    self.bite(otherAgent)
+        ## only the faster one bites
+        #if self.velocity > otherAgent.velocity:
+        #    self.bite(otherAgent)
 
-          #both transfuse and bite
-          self.bite(otherAgent)
-          self.transfuse(otherAgent)
+        #both transfuse and bite
+        self.bite(otherAgent)
+        self.transfuse(otherAgent)
 ```
 ## Meta
 
