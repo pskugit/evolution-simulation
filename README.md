@@ -1,8 +1,10 @@
 # Evolution Simulation
 > a simulation of the evolution of brain equipped agents
 
-This program simulates agents that are equipped with several sensors and actions that conected through an
-artificial neural network which is unique for every single angent. The weights of the feed forward net are updates through an evolutionary algorithm with the age of the agent as an implicit fitness function.
+This program simulates agents that are equipped with several sensors and actors.
+Sensors and actors are conected through an artificial neural network which is unique for every single angent. 
+The weights of the feed forward net are updated through an evolutionary algorithm.
+The age of the agent provides an implicit fitness function.
 
 ## Prerequisites
 
