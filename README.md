@@ -21,12 +21,12 @@ $ pip install numpy
 
 The agents live on a grid of food, which partly gets consumed on the position where an agent is passing over it. 
 When doing so, the agent replenishes health which he loses constantly or through special interactions. 
-Once an agent's health reaced 0, it dies.
-In evenry frame, every agent has a chance to reproduce.
-Reproduction can happen sexually (only possible when agents collide) or asexually. The offspring shares the dna of its parent or a mix of the dna of its parents in the former case (cross-over). The offspring's dna also has a chance to mutate individual genes. 
-Agent with similar dna belong to a certain clan, which also defines their names. New clans can emerge when the distance between parent and child dna exceeds are certain threshold. 
+Once an agent's health reaches 0, the agent dies.
+In every frame, every agent has a chance to reproduce.
+Reproduction can happen sexually (only possible when agents collide) or asexually. The offspring shares the DNA of its parent or a mix of the DNAs of its parents in the former case (cross-over). The offspring's dna also has a chance to mutate individual genes. 
+Agent with similar DNA belong to a certain clan, which also defines their names. New clans can emerge when the genetic distance between parent and child dna exceeds are certain threshold. 
 
-Aside from the main simulation arem the program has the informative sections:
+Aside from the main simulation area the program has several informative sections:
 - the population graph (bottom): shows the amount of food in the world and the numer of agents over time 
 - the agent ranking (top right): lists the oldest agents and a ranking of the most successful clans
 - the agent's brain (right): shows the neural network weights of a representative agent from the dominant clan
@@ -35,7 +35,7 @@ Aside from the main simulation arem the program has the informative sections:
 
 ![](/screenshots/ls4.jpg?raw=true "Optional Title")
 
-Agents are equipped with 13 sensors that form the input variable for the neural network:
+Agents are equipped with 13 sensors that form the input vector for the neural network:
 
 1. _health_: the current health percentage (also mirrored in the agents color intensity)
 2. _speed_: the current speed (relative to max_speed)
@@ -51,7 +51,7 @@ Agents are equipped with 13 sensors that form the input variable for the neural 
 12. _ear_back_: the sum of inverse distances of other agents behind the agent. Capped on a set maximum value.
 13. _collision_: binary signal of weather or not the agent collides with another
 
-According to the sensory input and it's brain, an agent will show certain output values:
+According to the sensory input and its brain, an agent will show certain output values:
 
 1. _torque_: the angle of further movement 
 2. _acceleration_: the movement speed for the next frame
@@ -60,7 +60,7 @@ According to the sensory input and it's brain, an agent will show certain output
 5. _altruisticness_: defines what happens when the agent collides. Makes the agent more green.
 
 Allowing agents to "choose" between being aggressive and altruistic, aims to have different survival strategies emerging. 
-Aggressive agents bite on collision, while altruistic agents transfuse health to the one they collide with. The amout of bitten or tranfused health depends on an agents spike size/power.
+Aggressive agents bite on collision, while altruistic agents transfuse health to the agent they collide with. The amout of bitten or tranfused health depends on an agents spike size/power.
 
 ## Parameters to explore
 
